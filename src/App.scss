@@ -1,4 +1,4 @@
-// global 
+// global
 * {
   margin: 0;
   padding: 0;
@@ -20,28 +20,44 @@ $border-Clr: rgba(0, 0, 0, 0.4);
 body {
   @extend %center;
   width: 100%;
-  height: 100vh;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
+nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100vw;
+  height: 60px;
+  padding: 0 10px;
+  overflow: hidden;
 
+  svg {
+    transform: scale(0.3);
+    transform-origin: 0%;
+  }
+}
 .container {
   @extend %center;
   flex-direction: column;
-  width: 400px;
+  max-width: 400px;
+  width: 95vw;
   margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 20px;
   background-color: rgba(245, 222, 179, 0.5);
   padding: 20px;
+  // height: 80vh;
 }
 
 #balance {
   @extend %center;
-  width: 80%;
+  width: 60%;
   padding: 10px;
   margin: 0 auto;
   gap: 5px;
   span {
     &:first-child {
-      font-size: 20px;
-
       color: darkblue;
       font-weight: 500;
     }
@@ -63,7 +79,6 @@ body {
     align-items: center;
     padding: 10px 0;
     color: darkblue;
-    font-size: 20px;
     font-weight: 500;
 
     &:first-child {
@@ -80,7 +95,6 @@ body {
       }
 
       span {
-
         &:last-child {
           color: green;
           font-weight: 500;
@@ -89,9 +103,7 @@ body {
     }
 
     &:last-child {
-
       span {
-
         &:last-child {
           color: red;
           font-weight: 500;
@@ -106,7 +118,7 @@ h4 {
   text-align: start;
   padding: 10px 0;
   border-bottom: 2px solid $border-Clr;
-  font-size: 20px;
+  font-size: 1rem;
   padding: 5px;
 }
 
@@ -145,6 +157,7 @@ h4 {
         left: -35px;
         opacity: 0;
         transition: 0.3s;
+
         cursor: pointer;
       }
 
@@ -169,7 +182,6 @@ h4 {
   flex-direction: column;
   gap: 5px;
   form {
-
     @extend %center;
     width: 100%;
     flex-direction: column;
@@ -185,14 +197,12 @@ h4 {
       padding: 10px;
       font-size: 15px;
       letter-spacing: 1px;
-
     }
     label {
       justify-content: start;
       font-weight: 500;
       font-size: 15px;
       height: 20px;
-
     }
 
     button {
@@ -213,4 +223,3 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-

@@ -1,10 +1,16 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/globalContext";
-import { sign } from "./TransitionList";
+import { sign } from "./TransectionList";
 const Expense = () => {
-  const {transactions}=useContext(GlobalContext)
-const income=transactions.reduce((acc,cur)=>+cur.amount>0?acc+=(+cur.amount):acc,0)
-const expense=transactions.reduce((acc,cur)=>+cur.amount<0?acc+=(+cur.amount):acc,0)
+  const { transactions } = useContext(GlobalContext);
+  const income = transactions.reduce(
+    (acc, cur) => (+cur.amount > 0 ? (acc += +cur.amount) : acc),
+    0
+  );
+  const expense = transactions.reduce(
+    (acc, cur) => (+cur.amount < 0 ? (acc += +cur.amount) : acc),
+    0
+  );
   return (
     <div id="expense">
       <div>
@@ -13,7 +19,9 @@ const expense=transactions.reduce((acc,cur)=>+cur.amount<0?acc+=(+cur.amount):ac
       </div>
       <div>
         <span>Expense</span>
-        <span>{sign()} $ {Math.abs(expense)}</span>
+        <span>
+          {sign()} $ {Math.abs(expense)}
+        </span>
       </div>
     </div>
   );
