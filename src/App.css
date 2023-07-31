@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#input-cont form > *, #input-cont form, #input-cont, #transection .list-cont #list small, #transection .list-cont #list, #transection .list-cont, #transection, #expense div, #expense, #balance, .container, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  background-color: rgba(245, 222, 179, 0.5);
+  padding: 20px;
+}
+
+#balance {
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+  gap: 5px;
+}
+#balance span:first-child {
+  font-size: 20px;
+  color: darkblue;
+  font-weight: 500;
+}
+
+#expense {
+  justify-content: space-around;
+  width: 90%;
+  gap: 5px;
+  background: white;
+  margin: 0 auto;
+}
+#expense div {
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  color: darkblue;
+  font-size: 20px;
+  font-weight: 500;
+}
+#expense div:first-child {
+  position: relative;
+}
+#expense div:first-child::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 0%;
+  height: 70%;
+  width: 2px;
+  background: rgba(0, 0, 0, 0.4);
+}
+#expense div:first-child span:last-child {
+  color: green;
+  font-weight: 500;
+}
+#expense div:last-child span:last-child {
+  color: red;
+  font-weight: 500;
+}
+
+h4 {
+  width: 100%;
+  text-align: start;
+  padding: 10px 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  font-size: 20px;
+  padding: 5px;
+}
+
+#transection {
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+}
+#transection .list-cont {
+  gap: 5px;
+  flex-direction: column;
+  width: 90%;
+  margin: 8px auto;
+}
+#transection .list-cont #list {
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 8px;
+  position: relative;
+}
+#transection .list-cont #list small {
+  position: absolute;
+  height: 80%;
+  width: 30px;
+  background-color: red;
+  color: white;
+  font-size: 25px;
+  top: 10%;
+  left: -35px;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#transection .list-cont #list:hover small {
+  opacity: 1;
+}
+#transection .list-cont #list.minus {
+  border-right: 4px solid red;
+}
+#transection .list-cont #list.positive {
+  border-right: 4px solid green;
+}
+
+#input-cont {
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+}
+#input-cont form {
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+#input-cont form > * {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  outline: 0;
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+#input-cont form label {
+  justify-content: start;
+  font-weight: 500;
+  font-size: 15px;
+  height: 20px;
+}
+#input-cont form button {
+  background-color: darkblue;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#input-cont form button:hover {
+  background-color: white;
+  color: darkblue;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}/*# sourceMappingURL=App.css.map */
