@@ -7,7 +7,8 @@
 
 // variables
 $border-Clr: rgba(0, 0, 0, 0.4);
-
+$main: rgba(255, 255, 255, 0.75);
+$red: rgb(164, 31, 31);
 // placeholders
 %center {
   display: flex;
@@ -22,6 +23,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: #111111;
 }
 nav {
   position: absolute;
@@ -46,7 +48,7 @@ nav {
   margin-top: 80px;
   margin-bottom: 20px;
   background-color: rgba(245, 222, 179, 0.5);
-  padding: 20px;
+  padding: 40px;
   // height: 80vh;
 }
 
@@ -69,7 +71,7 @@ nav {
   justify-content: space-around;
   width: 90%;
   gap: 5px;
-  background: white;
+  background: $main;
   margin: 0 auto;
 
   div {
@@ -105,7 +107,7 @@ nav {
     &:last-child {
       span {
         &:last-child {
-          color: red;
+          color: $red;
           font-weight: 500;
         }
       }
@@ -141,7 +143,7 @@ h4 {
 
       justify-content: space-between;
       width: 100%;
-      background-color: white;
+      background-color: $main;
       padding: 8px;
       position: relative;
 
@@ -150,8 +152,8 @@ h4 {
         position: absolute;
         height: 80%;
         width: 30px;
-        background-color: red;
-        color: white;
+        background-color: $red;
+        color: $main;
         font-size: 25px;
         top: 10%;
         left: -35px;
@@ -166,7 +168,7 @@ h4 {
       }
 
       &.minus {
-        border-right: 4px solid red;
+        border-right: 4px solid $red;
       }
 
       &.positive {
@@ -207,12 +209,13 @@ h4 {
 
     button {
       background-color: darkblue;
-      color: white;
+      color: $main;
       transition: 0.3s;
       cursor: pointer;
+      margin-top: 50px;
 
       &:hover {
-        background-color: white;
+        background-color: $main;
         color: darkblue;
       }
     }
@@ -222,4 +225,15 @@ h4 {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    transform: scale(0.6);
+  }
 }
